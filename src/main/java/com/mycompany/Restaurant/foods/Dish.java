@@ -16,16 +16,19 @@ import com.mycompany.Restaurant.values.DishVaration;
 public class Dish {
     
     Scanner read = new Scanner(System.in);
-    
+
+    String name;    
     DishTypes type;
     int stock;
     int price;
-    //DishVaration variation;
+    DishVaration variation;
 
-    public Dish(DishTypes type, int stock, int price ) {
+
+    public Dish(String name,DishTypes type, int stock, int price, DishVaration variation ) {
         this.type = type;
         this.stock = stock;
         this.price = price;
+        this.variation = variation;
        
     }
 

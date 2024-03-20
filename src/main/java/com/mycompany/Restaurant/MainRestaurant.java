@@ -5,6 +5,7 @@
 package com.mycompany.Restaurant;
 
 import com.mycompany.Restaurant.foods.Dish;
+import com.mycompany.Restaurant.foods.Menu;
 import java.util.Scanner;
 import com.mycompany.Restaurant.people.People;
 import com.mycompany.Restaurant.values.DishTypes;
@@ -23,15 +24,24 @@ public class MainRestaurant {
        People  techer         = new People(UserTypes.TECHER, 3443, "Jairo");
        People administrative  = new People(UserTypes.ADMINISTRATIVE, 2344, "chela");
        
+
        
-       Dish   breakfast      = new Dish(DishTypes.BREAKFAST,2, 3000);
+       Dish   breakfast      = new Dish("Arros de pollo",DishTypes.BREAKFAST,20, 3000,DishVaration.OPTION1);
      //  Dish   breakfastTwo      = new Dish(DishTypes.BREAKFAST,1, 3000, DishVaration.OPTION2);
-       Dish   lunch          = new Dish(DishTypes.LUNCH,0, 4000);
+       Dish   lunch          = new Dish("Caldo con arepa",DishTypes.LUNCH,10, 4000,DishVaration.OPTION1);
      // Dish   lunchTwo          = new Dish(DishTypes.BREAKFAST,5, 4000, DishVaration.OPTION2);
-       Dish   dinner         = new Dish(DishTypes.DINNER,1, 3000);
+       Dish   dinner         = new Dish("Arroz chino",DishTypes.DINNER,7, 3000,DishVaration.OPTION1);
      //  Dish   dinnerTwo         = new Dish(DishTypes.BREAKFAST,3, 3000, DishVaration.OPTION1);
        
        Scanner read             = new Scanner(System.in);
+       
+        Menu menu = new Menu();
+        
+        menu.addDish(breakfast);
+        menu.addDish(lunch);        
+        menu.addDish(lunch); 
+        
+        menu.showMenu();
        
        People arrayPeople[]={student,techer,administrative};
        Dish   arrayDish  []={breakfast,lunch,dinner};
