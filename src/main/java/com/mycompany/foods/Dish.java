@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.foods;
+package com.mycompany.foods;
 
 import com.mycompany.restaurant.MainRestaurant;
 import java.util.Scanner;
-import com.values.DishTypes;
-import com.values.DishVaration;
+import com.mycompany.values.DishTypes;
+import com.mycompany.values.DishVaration;
 
 /**
  *
@@ -17,18 +17,33 @@ public class Dish {
     
     Scanner read = new Scanner(System.in);
     
+    String name;
     DishTypes type;
     int stock;
     int price;
     //DishVaration variation;
 
-    public Dish(DishTypes type, int stock, int price ) {
+    public Dish(String name,DishTypes type, int stock, int price ) {
+        this.name = name;
         this.type = type;
         this.stock = stock;
         this.price = price;
        
     }
+    @Override
+    public String toString(){
+        return name + type+stock +price;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
 
     public DishTypes getType() {
         return type;

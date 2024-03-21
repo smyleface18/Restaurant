@@ -2,12 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.people;
+package com.mycompany.people;
 
-import com.foods.Dish;
-import com.values.UserTypes;
+import com.mycompany.foods.Dish;
+import com.mycompany.values.UserTypes;
 import java.util.Scanner;
-import com.values.DishTypes;
+import com.mycompany.values.DishTypes;
+import com.mycompany.foods.Menu;
 
 /**
  *
@@ -91,7 +92,9 @@ public class People {
         if (this.type != UserTypes.ADMINISTRATIVE){
             System.out.println("Usted no esta autorizado para vender");
         }
-        else {
+        else {        
+            menu.showMenu();
+            menu.showDishName();
         }
     }
     

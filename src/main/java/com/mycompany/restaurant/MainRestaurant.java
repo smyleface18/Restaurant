@@ -4,12 +4,14 @@
  */
 package com.mycompany.restaurant;
 
-import com.foods.Dish;
+import com.mycompany.foods.Dish;
 import java.util.Scanner;
-import com.people.People;
-import com.values.DishTypes;
-import com.values.UserTypes;
-import com.values.DishVaration;
+import com.mycompany.people.People;
+import com.mycompany.values.DishTypes;
+import com.mycompany.values.UserTypes;
+import com.mycompany.values.DishVaration;
+import java.util.ArrayList;
+import com.mycompany.foods.Menu;
 
 /**
  *
@@ -24,13 +26,20 @@ public class MainRestaurant {
        People administrative  = new People(UserTypes.ADMINISTRATIVE, 2344, "chela");
        
        
-       Dish   breakfast      = new Dish(DishTypes.BREAKFAST,2, 3000);
+       Dish   breakfast      = new Dish("huevos pericos",DishTypes.BREAKFAST,2, 3000);
      //  Dish   breakfastTwo      = new Dish(DishTypes.BREAKFAST,1, 3000, DishVaration.OPTION2);
-       Dish   lunch          = new Dish(DishTypes.LUNCH,0, 4000);
+       Dish   lunch          = new Dish("arepa ",DishTypes.LUNCH,0, 4000);
      // Dish   lunchTwo          = new Dish(DishTypes.BREAKFAST,5, 4000, DishVaration.OPTION2);
-       Dish   dinner         = new Dish(DishTypes.DINNER,1, 3000);
+       Dish   dinner         = new Dish("arroz chinese ",DishTypes.DINNER,1, 3000);
      //  Dish   dinnerTwo         = new Dish(DishTypes.BREAKFAST,3, 3000, DishVaration.OPTION1);
        
+        Menu menu = new Menu();
+        
+        menu.addDish(breakfast);
+        menu.addDish(lunch);
+        menu.addDish(dinner);
+     
+     
        Scanner read             = new Scanner(System.in);
        
        People arrayPeople[]={student,techer,administrative};
@@ -57,20 +66,25 @@ public class MainRestaurant {
         }
         else if (action.equalsIgnoreCase("sell")){
              arrayPeople[i].sell();
+             
+
         }
         
-        
-        
-    }
-    
-    
-    
-    
-        public static void orderFood() {
-        
+
+
+
+
+
+
+
         
         
         
     }
     
+    
+    
+    
+    
+ 
 }
