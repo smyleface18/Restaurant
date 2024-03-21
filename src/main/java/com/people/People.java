@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package people;
+package com.people;
 
-import foods.Dish;
-import values.UserTypes;
+import com.foods.Dish;
+import com.values.UserTypes;
 import java.util.Scanner;
-import values.DishTypes;
+import com.values.DishTypes;
 
 /**
  *
